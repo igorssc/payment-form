@@ -64,7 +64,7 @@ export const Card = ({
             )}
           >
             <div className="chip absolute w-12 md:w-14 h-9 md:h-11 top-3 md:top-5 left-5 bg-gradient-to-tr from-slate-300 to-zinc-400 rounded-lg before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:m-auto before:w-4/5 before:h-2/3 before:rounded-md before:border-4 before:border-zinc-800/20"></div>
-            <div className="logo absolute md:top-2 right-5 w-14 flex items-center justify-center h-14 md:h-16">
+            <div className="logo absolute md:top-2 right-5 w-10 md:w-14 flex items-center justify-center h-14 md:h-16">
               {brand &&
                 ["visa", "mastercard", "diners", "american", "elo"].some(
                   (value) => value === brand
@@ -117,7 +117,7 @@ export const Card = ({
             )}
           >
             <div className="strip absolute w-full h-9 md:h-12 top-7 left-0 bg-gradient-to-r from-zinc-700 to-zinc-900"></div>
-            <div className="logo top-32 md:top-44 absolute right-5 w-14 flex items-center justify-center h-16">
+            <div className="logo top-[7.5rem] md:top-44 absolute right-5 w-10 md:w-14 flex items-center justify-center h-16">
               {brand &&
                 ["visa", "mastercard", "diners", "american", "elo"].some(
                   (value) => value === brand
