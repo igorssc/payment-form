@@ -42,7 +42,7 @@ export const Card = ({
     <>
       <div
         className={clsx(
-          "credit-card-box perspective-10 w-[400px] h-[250px] relative left-1/2 -translate-x-1/2",
+          "credit-card-box perspective-10 w-[300px] h-[200px] md:w-[400px] md:h-[250px] relative left-1/2 -translate-x-1/2",
           className
         )}
         {...props}
@@ -63,8 +63,8 @@ export const Card = ({
               brand === "elo" && "!from-orange-500 !to-yellow-600"
             )}
           >
-            <div className="chip absolute w-14 h-11 top-5 left-5 bg-gradient-to-tr from-slate-300 to-zinc-400 rounded-lg before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:m-auto before:w-4/5 before:h-2/3 before:rounded-md before:border-4 before:border-zinc-800/20"></div>
-            <div className="logo absolute top-2 right-5 w-14 flex items-center justify-center h-16">
+            <div className="chip absolute w-12 md:w-14 h-9 md:h-11 top-5 left-5 bg-gradient-to-tr from-slate-300 to-zinc-400 rounded-lg before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:m-auto before:w-4/5 before:h-2/3 before:rounded-md before:border-4 before:border-zinc-800/20"></div>
+            <div className="logo absolute top-2 right-5 w-14 flex items-center justify-center h-14 md:h-16">
               {brand &&
                 ["visa", "mastercard", "diners", "american", "elo"].some(
                   (value) => value === brand
@@ -87,18 +87,18 @@ export const Card = ({
                   />
                 )}
             </div>
-            <div className="number absolute my-0 mx-auto top-24 left-6 text-3xl opacity-80 tracking-wider">
+            <div className="number absolute my-0 mx-auto top-[5.5rem] md:top-24 left-6 text-xl md:text-3xl opacity-80 tracking-wider">
               {showNumberCard}
             </div>
-            <div className="card-holder absolute my-0 mx-auto top-44 left-5 text-xl capitalize">
+            <div className="card-holder absolute my-0 mx-auto top-36 md:top-44 left-5 text-sm md:text-xl capitalize">
               <label className="text-xs font-normal opacity-50 block mb-1 tracking-widest uppercase">
-                Card holder
+                Nome
               </label>
               <div>{holderName}</div>
             </div>
-            <div className="card-expiration-date absolute my-0 mx-auto top-44 left-auto right-5 text-xl capitalize text-right">
+            <div className="card-expiration-date absolute my-0 mx-auto top-36 md:top-44 left-auto right-5 text-sm md:text-xl capitalize text-right">
               <label className="text-xs font-normal opacity-50 block mb-1 tracking-widest uppercase">
-                Expires
+                Validade
               </label>
               <div>
                 {monthExpiration}/{yearExpiration}
@@ -116,8 +116,8 @@ export const Card = ({
               brand === "elo" && "!from-orange-500 !to-yellow-600"
             )}
           >
-            <div className="strip absolute w-full h-12 top-7 left-0 bg-gradient-to-r from-zinc-700 to-zinc-900"></div>
-            <div className="logo top-44 absolute right-5 w-14 flex items-center justify-center h-16">
+            <div className="strip absolute w-full h-9 md:h-12 top-7 left-0 bg-gradient-to-r from-zinc-700 to-zinc-900"></div>
+            <div className="logo top-36 md:top-44 absolute right-5 w-14 flex items-center justify-center h-16">
               {brand &&
                 ["visa", "mastercard", "diners", "american", "elo"].some(
                   (value) => value === brand
@@ -140,7 +140,7 @@ export const Card = ({
                   />
                 )}
             </div>
-            <div className="ccv h-9 bg-white w-11/12 rounded-md top-28 left-0 right-0 absolute my-0 mx-auto text-right pr-2">
+            <div className="ccv h-7 md:h-9 bg-white w-11/12 rounded-md top-24 md:top-28 left-0 right-0 absolute my-0 mx-auto text-right pr-2 text-sm md:text-xl">
               <label className="text-xs font-normal opacity-50 block tracking-widest uppercase -mt-6 mb-3 text-white">
                 CCV
               </label>
