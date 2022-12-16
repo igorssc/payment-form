@@ -18,7 +18,6 @@ export const FormPayment = ({ setShowPaymentCard }: FormPaymentProps) => {
   const {
     holderName,
     setHolderName,
-    numbers,
     setNumbers,
     monthExpiration,
     setMonthExpiration,

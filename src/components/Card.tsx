@@ -12,7 +12,7 @@ export const Card = ({
   className,
   ...props
 }: CardProps) => {
-  const { numbers, holderName, monthExpiration, yearExpiration, cvv, flag } =
+  const { numbers, holderName, monthExpiration, yearExpiration, cvv, brand } =
     useContext(PaymentCardContext);
 
   const [showNumberCard, setShowNumberCard] = useState("#### #### #### ####");
@@ -56,27 +56,28 @@ export const Card = ({
           <div
             className={clsx(
               "front w-full h-full rotate-y-0 rounded-2xl backface-hidden bg-gradient-to-tr from-slate-600 to-gray-400 before:rounded-2xl absolute z-10 text-white top-0 left-0 before:content-[''] before:absolute before:w-full before:h-full before:top-0",
-              flag === "visa" && "!from-sky-600 !to-cyan-400",
-              flag === "mastercard" && "!from-amber-500 !to-amber-900",
-              flag === "diners" && "!from-gray-600 !to-zinc-300",
-              flag === "american" && "!from-slate-300 !to-gray-500",
-              flag === "elo" && "!from-orange-500 !to-yellow-600"
+              brand === "visa" && "!from-sky-600 !to-cyan-400",
+              brand === "mastercard" && "!from-amber-500 !to-amber-900",
+              brand === "diners" && "!from-gray-600 !to-zinc-300",
+              brand === "american" && "!from-slate-300 !to-gray-500",
+              brand === "elo" && "!from-orange-500 !to-yellow-600"
             )}
           >
             <div className="chip absolute w-14 h-11 top-5 left-5 bg-gradient-to-tr from-slate-300 to-zinc-400 rounded-lg before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:m-auto before:w-4/5 before:h-2/3 before:rounded-md before:border-4 before:border-zinc-800/20"></div>
             <div className="logo absolute top-2 right-5 w-14 flex items-center justify-center h-16">
-              {flag &&
+              {brand &&
                 ["visa", "mastercard", "diners", "american", "elo"].some(
-                  (value) => value === flag
+                  (value) => value === brand
                 ) && (
                   <Image
                     src={
-                      (flag === "visa" && "/assets/visa.svg") ||
-                      (flag === "mastercard" && "/assets/mastercard.svg") ||
-                      (flag === "diners" &&
+                      (brand === "visa" && "/assets/visa.svg") ||
+                      (brand === "mastercard" && "/assets/mastercard.svg") ||
+                      (brand === "diners" &&
                         "/assets/diners-club-international.svg") ||
-                      (flag === "american" && "/assets/american-express.svg") ||
-                      (flag === "elo" && "/assets/elo.svg") ||
+                      (brand === "american" &&
+                        "/assets/american-express.svg") ||
+                      (brand === "elo" && "/assets/elo.svg") ||
                       ""
                     }
                     width={56}
@@ -108,27 +109,28 @@ export const Card = ({
             className={clsx(
               "back w-full h-full rounded-2xl backface-hidden bg-gradient-to-tr from-slate-600 to-gray-400 absolute text-white top-0 left-0",
               showPaymentCard === "back" ? "rotate-y-180" : "-rotate-y-180",
-              flag === "visa" && "!from-sky-600 !to-cyan-400",
-              flag === "mastercard" && "!from-amber-500 !to-amber-900",
-              flag === "diners" && "!from-gray-600 !to-zinc-300",
-              flag === "american" && "!from-slate-300 !to-gray-500",
-              flag === "elo" && "!from-orange-500 !to-yellow-600"
+              brand === "visa" && "!from-sky-600 !to-cyan-400",
+              brand === "mastercard" && "!from-amber-500 !to-amber-900",
+              brand === "diners" && "!from-gray-600 !to-zinc-300",
+              brand === "american" && "!from-slate-300 !to-gray-500",
+              brand === "elo" && "!from-orange-500 !to-yellow-600"
             )}
           >
             <div className="strip absolute w-full h-12 top-7 left-0 bg-gradient-to-r from-zinc-700 to-zinc-900"></div>
             <div className="logo top-44 absolute right-5 w-14 flex items-center justify-center h-16">
-              {flag &&
+              {brand &&
                 ["visa", "mastercard", "diners", "american", "elo"].some(
-                  (value) => value === flag
+                  (value) => value === brand
                 ) && (
                   <Image
                     src={
-                      (flag === "visa" && "/assets/visa.svg") ||
-                      (flag === "mastercard" && "/assets/mastercard.svg") ||
-                      (flag === "diners" &&
+                      (brand === "visa" && "/assets/visa.svg") ||
+                      (brand === "mastercard" && "/assets/mastercard.svg") ||
+                      (brand === "diners" &&
                         "/assets/diners-club-international.svg") ||
-                      (flag === "american" && "/assets/american-express.svg") ||
-                      (flag === "elo" && "/assets/elo.svg") ||
+                      (brand === "american" &&
+                        "/assets/american-express.svg") ||
+                      (brand === "elo" && "/assets/elo.svg") ||
                       ""
                     }
                     width={56}
