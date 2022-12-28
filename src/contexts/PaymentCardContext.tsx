@@ -56,7 +56,7 @@ export function PaymentCardProvider({ children }: PaymentCardProviderProps) {
       | null
       | undefined;
 
-    numbers.match(/^4[0-9]{15}$/) && (brand = "visa");
+    numbers.match(/^4[0-9]/) && (brand = "visa");
 
     numbers.match(
       /^((5(([1-2]|[4-5])[0-9]{8}|0((1|6)([0-9]{7}))|3(0(4((0|[2-9])[0-9]{5})|([0-3]|[5-9])[0-9]{6})|[1-9][0-9]{7})))|((508116)\\d{4,10})|((502121)\\d{4,10})|((589916)\\d{4,10})|(2[0-9]{15})|(67[0-9]{14})|(506387)\\d{4,10})/

@@ -29,11 +29,16 @@ export const Card = ({
 
     const base = "#### #### #### ####";
 
-    const numbersOfCard =
+    let numbersOfCard =
       numbersWithSeparations +
       (numbersWithSeparations.length !== base.length
         ? base.slice(numbersWithSeparations.length - base.length)
         : "");
+
+    numbersOfCard =
+      numbersOfCard.substring(0, 5) +
+      numbersOfCard.substring(5, 14).replaceAll(/[0-9]/g, "*") +
+      numbersOfCard.substring(14, 19);
 
     setShowNumberCard(numbersOfCard);
   }, [numbers]);
@@ -88,7 +93,14 @@ export const Card = ({
                 )}
             </div>
             <div className="number absolute my-0 mx-auto top-20 md:top-24 left-6 text-xl md:text-3xl opacity-80 tracking-wider">
-              {showNumberCard}
+              {showNumberCard.split("").map((char, i) => (
+                <span
+                  key={i}
+                  className="inline-block w-[0.85rem] md:w-[1.15rem]"
+                >
+                  {char}
+                </span>
+              ))}
             </div>
             <div className="card-holder absolute my-0 mx-auto top-32 md:top-44 left-5 text-xs md:text-xl capitalize">
               <label className="text-[0.6rem] md:text-xs font-normal opacity-70 block mb-1 tracking-widest uppercase">
@@ -144,7 +156,7 @@ export const Card = ({
               <label className="text-[0.6rem] md:text-xs font-normal opacity-70 block tracking-widest uppercase -mt-6 mb-3 text-white">
                 CCV
               </label>
-              <div className="text-black">{cvv}</div>
+              <div className="text-black">{cvv.replaceAll(/[0-9]/g, "*")}</div>
             </div>
           </div>
         </div>
