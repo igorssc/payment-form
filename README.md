@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Featured](https://user-images.githubusercontent.com/26682297/210121060-e659346a-71b7-471e-998d-11b2cdf9af58.jpg)
 
-## Getting Started
+Project developed in order to improve software development skills. it is based on a payment screen, where the customer is in the act of entering credit card data. There is an animation of a card that receives the entered data and displays it on its body, which is the main focus of this project.
 
-First, run the development server:
+## ✨ Technologies
+
+This project was developed with the following technologies:
+
+- React
+- Next.js
+- TypeScript
+- Tailwindcss
+
+## 🚀 How to run
+
+- Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
+git clone https://github.com/igorssc/payment-form.git
+
+cd payment-form
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Install dependencies
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# or
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+npm init
+```
 
-## Learn More
+- Start the server
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# or
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+npm run dev
+```
 
-## Deploy on Vercel
+You can now access [`localhost:3000`](http://localhost:3000) from your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🪄 Preview
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Access <https://form-payment.vercel.app>
+
+## 📝 Licence
+
+This project is under MIT licence. See the archive [LICENSE](LICENSE.md) to more details.
+
+---
+
+Made with 💜 by [IGS Design](https://igsdesign.com.br) - Igor Santos 👋
